@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weed Escape - 3D Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-container">
+            <div id="score">Score: 0</div>
+            <div id="time">Time: 0</div>
+            <div id="message"></div>
+        </div>
+        <div id="instructions">
+            <h2>Weed Escape</h2>
+            <p>Help the weed plant escape the indoor environment!</p>
+            <p>Controls: WASD or Arrow Keys to move</p>
+            <p>Avoid the bugs and find the exit!</p>
+            <button id="start-button">Start Game</button>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>Game Over</h2>
+            <p id="final-score">Your score: 0</p>
+            <p id="result-message"></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
